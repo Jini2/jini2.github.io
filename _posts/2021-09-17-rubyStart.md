@@ -18,7 +18,7 @@ layout: post
 
 CMD에서 `ruby -v` 라고 쳐보자.
 
-![ruby version](/images/2021-09-17-rubyVer.png)
+![ruby version]({{site.baseurl}}/images/2021-09-17-rubyVer.png)
 
 #### 2. 레일즈가 뭘까?
 ---
