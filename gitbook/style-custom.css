@@ -1,0 +1,66 @@
+.flex {
+    display: flex;
+}
+
+.book-summary, .book-body {
+    top: 63px;
+}
+
+.header-wrapper {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+    border-bottom: 1px solid #eaecef;
+}
+
+.header-logo-wrapper {
+    margin-right: 50px;
+}
+
+.header-logo {
+    font-size: 2em;
+    color: #333;
+}
+
+#header_search_query {
+    cursor: text;
+    width: 15rem;
+    height: 3rem;
+    color: #333;
+    display: inline-block;
+    border: 1px solid #e8e8e8;
+    border-radius: 3rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    padding: 0 3.5rem 0 2rem;
+    margin-right: -4rem;
+}
+
+#header_search_query:focus {
+    outline:none;
+}
+
+.button-search {
+    background: none;
+    border: none;
+}
+
+.nav-app-wrapper {
+    display: inline-block;
+    position: absolute;
+    right: 2rem;
+}
+
+.nav-app a {
+    font-size: 1.5em;
+    color: #ccc;
+    padding-left: 1rem;
+}
+
+.nav-app a:hover {
+    color: #333;
+}
+
+.cat-link h2 {
+    margin: 0;
+}

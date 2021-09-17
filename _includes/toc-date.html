@@ -1,47 +1,75 @@
+<header>
+    
+    <div class="header-wrapper flex">
+        <span class="header-logo-wrapper">
+            <a href="{{site.baseurl}}" class="header-logo">
+                <i class="fa fa-book"></i>
+                <span>{{ site.title | escape }}</span>
+            </a>
+        </span> 
+        <div class="header-search-wrapper">
+            <form method="post" name="header_search">
+                <label for="header_search_query" class="sr-only">Search:</label> 
+                <div class="relative">
+                    <input id="header_search_query" type="search" name="header_search_query" value="" placeholder="Search for posts..." class="input-reset  input-focus header-search-input"> 
+                    <button type="submit" name="header_search_submit" class="button-search">
+                        <i class="fa fa-search"></i>
+                        <span class="sr-only">Search!</span>
+                    </button>
+                </div> 
+            </form>
+        </div> 
+        <div class="nav-app-wrapper">
+            <nav class="nav-app">
+                <!-- <a href="/app1" class="">nav-app1</a> 
+                <a href="/app2" class="">nav-app2</a> 
+                <a href="/app3" class="">nav-app3</a>  -->
+            </nav>
+        </div>
+    </div> 
+    
+</header>
+
 <div class="book-summary">
-    <!-- <div id="book-search-input" role="search">
-        <input type="text" placeholder="Type to search" />
-    </div> -->
     <nav role="navigation">
         <ul class="summary">
-            {% if page.url == "/index.html" or page.url == "/" %}
-            <li class="chapter active" data-level="1.1" data-path="{{site.baseurl}}">
-            {% else %}
-            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}">
-            {% endif %}
-                <a href="{{site.baseurl}}">
-                    {{ site.title | escape }}
-                </a>
-            </li>
 
-            <li class="divider"></li>
-
-            {% assign reversed_posts = site.posts | reverse %}
-
-            {% for post in reversed_posts %}
-                {% if page.url == post.url %}
-                <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
+            {% for category in site.data.categories %}
+            <li class="chapter" data-level="1.1">
+                {% if page.category == category.key %}
+                <a class="cat-link cat-show" href="#"> 
                 {% else %}
-                <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
+                <a class="cat-link" href="#"> 
                 {% endif %}
-                    <a href="{{site.baseurl}}{{post.url}}">
-                        {{ post.title | escape }}
-                    </a>
-                    {% if site.toc.enabled %}
-                        {% if page.url == post.url %}
-                            {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                    <h2> 
+                        {{ category.name }} 
+                        {% if page.category == category.key %}
+                        <i class="fa fa-caret-down cat-icon"></i>
+                        {% else %}
+                        <i class="fa fa-caret-right cat-icon"></i>
                         {% endif %}
-                    {% endif %}
-                </li>
+                    </h2>
+                </a>
+
+                {% if page.category == category.key %}
+                <ul>
+                {% else %}
+                <ul class="hidden">
+                {% endif %}
+
+                    {% assign reversed_posts = site.categories[category.key] | reverse %}
+                    {% for post in reversed_posts %}
+                    <li class="chapter" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
+                        <a href="{{site.baseurl}}{{post.url}}">
+                            {{ post.title | escape }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+               
+            </li>
             {% endfor %}
 
-            <li class="divider"></li>
-
-            <li>
-                <a href="https://github.com/sighingnow/jekyll-gitbook/fork" target="blank" class="gitbook-link">
-                    Fork it Now!
-                </a>
-            </li>
         </ul>
     </nav>
 </div>
