@@ -18,7 +18,7 @@ layout: post
 
 CMD에서 `ruby -v` 라고 쳐보자.
 
-![ruby version]({{site.baseurl}}/images/2021-09-17-rubyVer.png)
+![2021-09-17-rubyVer](https://user-images.githubusercontent.com/90823543/133833364-178c85e0-91c7-4fe7-aea3-7c4a6b1c458a.PNG)
 
 #### 2. 레일즈가 뭘까?
 ---
