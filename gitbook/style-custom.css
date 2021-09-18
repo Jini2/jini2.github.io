@@ -15,7 +15,8 @@
 
 .header-logo {
     font-size: 2em;
-    color: #333;
+    color: #52d28b;
+    font-weight: bold;
 }
 
 #header_search_query {
