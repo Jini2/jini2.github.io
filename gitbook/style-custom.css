@@ -1,13 +1,13 @@
-body {
-    overflow-y: hidden;
-}
-
 .flex {
     display: flex;
 }
 
 .markdown-section {
     color: #213c31;
+}
+
+.navigation {
+    top: 112px;
 }
 
 .header-wrapper {

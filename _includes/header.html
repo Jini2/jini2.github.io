@@ -1,29 +1,27 @@
-<header>
-    <div class="header-wrapper flex">
-        <span class="header-logo-wrapper">
-            <a href="{{site.baseurl}}/" class="header-logo">
-                <i class="fa fa-hashtag"></i>
-                <span>{{ site.title | escape }}</span>
-            </a>
-        </span> 
-        <div class="header-search-wrapper">
-            <form method="post" name="header_search">
-                <label for="header_search_query" class="sr-only">Search:</label> 
-                <div class="relative">
-                    <input id="header_search_query" type="search" name="header_search_query" value="" placeholder="Search for posts..." class="input-reset  input-focus header-search-input"> 
-                    <button type="submit" name="header_search_submit" class="button-search">
-                        <i class="fa fa-search"></i>
-                        <span class="sr-only">Search!</span>
-                    </button>
-                </div> 
-            </form>
-        </div> 
-        <div class="nav-app-wrapper">
-            <nav class="nav-app">
-                <!-- <a href="/app1" class="">nav-app1</a> 
-                <a href="/app2" class="">nav-app2</a> 
-                <a href="/app3" class="">nav-app3</a>  -->
-            </nav>
-        </div>
+<div class="header-wrapper flex">
+    <span class="header-logo-wrapper">
+        <a href="{{site.baseurl}}/" class="header-logo">
+            <i class="fa fa-hashtag"></i>
+            <span>{{ site.title | escape }}</span>
+        </a>
+    </span> 
+    <div class="header-search-wrapper">
+        <form method="post" name="header_search">
+            <label for="header_search_query" class="sr-only">Search:</label> 
+            <div class="relative">
+                <input id="header_search_query" type="search" name="header_search_query" value="" placeholder="Search for posts..." class="input-reset  input-focus header-search-input"> 
+                <button type="submit" name="header_search_submit" class="button-search">
+                    <i class="fa fa-search"></i>
+                    <span class="sr-only">Search!</span>
+                </button>
+            </div> 
+        </form>
     </div> 
-</header>
+    <div class="nav-app-wrapper">
+        <nav class="nav-app">
+            <!-- <a href="/app1" class="">nav-app1</a> 
+            <a href="/app2" class="">nav-app2</a> 
+            <a href="/app3" class="">nav-app3</a>  -->
+        </nav>
+    </div>
+</div> 

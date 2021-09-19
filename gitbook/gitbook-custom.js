@@ -1,6 +1,9 @@
 require(['gitbook', 'jquery'], function(gitbook, $) {
     //sidebar default hide
     gitbook.storage.set('sidebar', false);
+    gitbook.events.on("page.change", function() {
+        resize();
+    });
     
     function resize(){
         if($(window).width() < 570) {
