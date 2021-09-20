@@ -1,17 +1,17 @@
 require(['gitbook', 'jquery'], function(gitbook, $) {
     //sidebar default hide
     gitbook.storage.set('sidebar', false);
-    gitbook.events.on("page.change", function() {
+    gitbook.events.on('page.change', function() {
         resize();
     });
     
     function resize(){
         if($(window).width() < 570) {
-            $(".header-search-wrapper").hide();
-            $(".nav-app-wrapper").hide();
+            $('.header-search-wrapper').hide();
+            $('.nav-app-wrapper').hide();
         }else{
-            $(".header-search-wrapper").show();
-            $(".nav-app-wrapper").show();
+            $('.header-search-wrapper').show();
+            $('nav-app-wrapper').show();
         }
     }
 

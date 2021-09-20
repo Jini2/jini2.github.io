@@ -9,7 +9,7 @@
                 {% else %}
                 <a class="cat-link" href="#"> 
                 {% endif %}
-                    <h2> 
+                    <h2 class="cat-label"> 
                         {{ category.name }} 
                         {% if page.category == category.key %}
                         <i class="fa fa-caret-down cat-icon"></i>
@@ -28,9 +28,11 @@
                     {% assign reversed_posts = site.categories[category.key] | reverse %}
                     {% for post in reversed_posts %}
                     <li class="chapter" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
-                        <a href="{{site.baseurl}}{{post.url}}">
-                            {{ post.title | escape }}
-                        </a>
+                        {% if page.url == post.url %}
+                        <a class="link-bold" href="{{site.baseurl}}{{post.url}}">{{ post.title | escape }}</a>
+                        {% else %}
+                        <a href="{{site.baseurl}}{{post.url}}">{{ post.title | escape }}</a>
+                        {% endif %}
                     </li>
                     {% endfor %}
                 </ul>

@@ -10,11 +10,32 @@
     top: 112px;
 }
 
+.book-header, .book-summary {
+    padding-top: 62px;
+}
+
+@media (max-width: 600px) {
+    .book-summary {
+        padding-top: 0;
+    }
+}
+
+.page-inner {
+    margin-top: 62px;
+}
+
 .header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     padding-left: 2rem;
     border-bottom: 1px solid #eaecef;
+    background-color: #fff;
 }
 
 .header-logo-wrapper {
@@ -66,6 +87,20 @@
     color: #333;
 }
 
-.cat-link h2 {
+.cat-link .cat-label {
     margin: 0;
+}
+
+.cat-link:hover {
+    text-decoration: none !important;
+    color: #52d28b !important;
+}
+
+.cat-show {
+    color: #52d28b !important;
+}
+
+.link-bold {
+    font-weight: bold;
+    color: #52d28b !important;
 }
