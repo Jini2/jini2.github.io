@@ -6,12 +6,18 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
     });
     
     function resize(){
-        if($(window).width() < 570) {
+        let winWidth = $(window).width();
+        if(winWidth < 570) {
             $('.header-search-wrapper').hide();
-            $('.nav-app-wrapper').hide();
-        }else{
+        } else {
             $('.header-search-wrapper').show();
-            $('nav-app-wrapper').show();
+        }
+
+        let navWidth = $('.nav-app-wrapper').width() || 0;
+        if(winWidth < 570 + navWidth) {
+            $('.nav-app-wrapper').hide();
+        } else {
+            $('.nav-app-wrapper').show();
         }
     }
 
