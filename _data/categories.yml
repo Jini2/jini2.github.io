@@ -4,5 +4,8 @@
 - key: ruby
   name: Ruby
 
+- key: git
+  name: Git
+
 - key: Jekyll
   name: DEMO
