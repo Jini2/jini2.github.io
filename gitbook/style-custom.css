@@ -75,6 +75,7 @@
     display: inline-block;
     position: absolute;
     right: 3rem;
+    margin: 4px;
 }
 
 .nav-app a {
