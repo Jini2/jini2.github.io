@@ -1,11 +1,11 @@
 - key: js
   name: JavaScript
 
+- key: py
+  name: Python
+
 - key: ruby
   name: Ruby
 
 - key: git
   name: Git
-
-- key: Jekyll
-  name: DEMO
