@@ -9,3 +9,6 @@
 
 - key: git
   name: Git
+
+- key: algorithm
+  name: 알고리즘
