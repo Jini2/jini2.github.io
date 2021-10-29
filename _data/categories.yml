@@ -1,6 +1,9 @@
 - key: js
   name: JavaScript
 
+- key: react
+  name: React
+
 - key: py
   name: Python
 
